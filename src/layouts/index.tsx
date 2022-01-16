@@ -16,15 +16,15 @@ export default function Default({ children, location, route, history, match }: I
             dispatch({type: 'app/setAccount', payload: accounts[0]})
         })
     }
-    return <Layout>
+    return <Layout className={'layout'}>
         <Header>
             <Menu mode="horizontal" theme={'dark'}>
                 <Menu.Item key="mail" icon={<RedEnvelopeOutlined/>}>
                     <Link to={'/lottery'}>Lottery</Link>
                 </Menu.Item>
-                <Menu.Item key="app" icon={<UsergroupAddOutlined/>}>
-                    <Link to={'/vote'}>Vote</Link>
-                </Menu.Item>
+                {/*<Menu.Item key="app" icon={<UsergroupAddOutlined/>}>*/}
+                {/*    <Link to={'/vote'}>Vote</Link>*/}
+                {/*</Menu.Item>*/}
                 <Menu.Item key="alipay" icon={<DollarOutlined/>}>
                     <Link to={'/crowdfunding'}>Crowdfunding</Link>
                 </Menu.Item>
